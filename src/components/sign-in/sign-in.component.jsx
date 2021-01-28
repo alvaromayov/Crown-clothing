@@ -17,12 +17,12 @@ class SignIn extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.setState({ email: '', password: ''})
+        this.setState({ email: '', password: '' })
     }
 
     handleChange = event => {
-        const {value, name} = event.target;
-        this.setState({[name]: value})
+        const { value, name } = event.target;
+        this.setState({ [name]: value })
     }
 
     render() {
@@ -48,8 +48,10 @@ class SignIn extends Component {
                         label="password"
                         required
                     />
-                    <CustomButton type="submit">Sign in</CustomButton>
-                    <CustomButton onClick={signInWithGoogle}> {' '} Sign in with google {' '}</CustomButton>
+                    <div className="buttons">
+                        <CustomButton type="submit">Sign in</CustomButton>
+                        <CustomButton onClick={signInWithGoogle} isGoogleSignIn> Sign in with google</CustomButton>
+                    </div>
                 </form>
             </div>
         )
