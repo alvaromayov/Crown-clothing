@@ -45,7 +45,6 @@ class App extends Component {
   render() {
     return (
       <div>
-
         <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={HomePage} />
